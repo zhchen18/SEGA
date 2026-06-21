@@ -1,0 +1,13 @@
+{
+  "max_qa": 90,
+  "dims": {
+    "question": 300,
+    "text": 300,
+    "audio": 79,
+    "video": 4842
+  },
+  "train_n": 107,
+  "dev_n": 35,
+  "train_pos": 30,
+  "dev_pos": 12
+}

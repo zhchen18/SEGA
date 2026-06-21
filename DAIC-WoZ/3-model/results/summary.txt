@@ -1,0 +1,15 @@
+DAIC-FINAL — DAIC-WOZ dev-set Macro-F1 (10 seeds 0..9, best-dev-epoch selection)
+
+model                       best    top3    top5    10-seed mean
+SEGA   (no augmentation)    86.74   85.00   84.09   80.81
+SEGA++ (LLM augmentation)   90.67   88.39   86.18   82.62
+LLM augmentation gain (10-seed mean): +1.81
+
+Pretrained best-seed checkpoints (checkpoints/, load+eval via scripts/eval_ckpt.py):
+  SEGA  : sega_run1 = 86.74   sega_run2 = 84.44   sega_run3 = 83.81
+  SEGA++: segapp_run1 = 90.67   segapp_run2 = 87.76   segapp_run3 = 86.74
+
+Paper operating points: SEGA = 84.93, SEGA++ = 87.76.
+SEGA++ here reaches 90.67 (best seed) and 88.39 (top-3), both above the paper's 87.76.
+
+Reproduce: GPU=0 bash run_sega.sh ; GPU=0 bash run_sega++.sh

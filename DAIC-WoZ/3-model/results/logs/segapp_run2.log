@@ -1,0 +1,1 @@
+[boost_graph norm=raw aug=replace nvar=1 mixup=1 ls=0.05 focal=0] BEST macro=87.76 (C=90.91 D=84.62 acc=88.57) @ep116  [162s, 809ms/ep]

@@ -1,0 +1,4 @@
+  fold1: Macro-F1 82.90  (P 82.90 R 82.90 acc 84.00) @ep65
+  fold2: Macro-F1 81.94  (P 82.65 R 81.82 acc 82.14) @ep55
+  fold3: Macro-F1 76.62  (P 76.25 R 79.17 acc 77.78) @ep40
+[AUG=llm] BEST macro=80.49  folds=[82.90 81.94 76.62]

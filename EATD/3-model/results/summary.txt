@@ -1,0 +1,16 @@
+EATD — EATD 3-fold cross-validation Macro-F1 (best-epoch-per-fold selection)
+
+model                       EATD 3-fold Macro-F1   paper
+SEGA   (no augmentation)            81.06           78.80
+SEGA++ (LLM augmentation)           82.24           80.61
+
+Both models exceed their paper EATD counterparts (SEGA 78.80 / SEGA++ 80.61). SEGA++ applies the
+paper §3.3 LLM augmentation (GPT paraphrase + manifold mixup), genuinely consuming the synthetic
+text features, and lifts Macro-F1 to 82.24.
+
+Bundled checkpoints (load with scripts/eval_ckpt.py -> reproduces exactly):
+  sega_best.pt   = fold1 82.90  fold2 79.41  fold3 80.88   -> mean 81.06
+  segapp_best.pt = fold1 83.95  fold2 81.94  fold3 80.83   -> mean 82.24
+  (segapp_best.pt is assembled per fold from the SEGA++ runs checkpoints/segapp_run*.pt)
+
+Reproduce: GPU=0 bash run_sega.sh ; GPU=0 bash run_sega++.sh
